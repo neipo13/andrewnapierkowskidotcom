@@ -18,7 +18,7 @@ a:hover { color: #22aa88; }
 .banner
 {
 	position: fixed;
-	background: url("../img/banner.png") center center;
+	background: #000 url("../img/banner.png") center center;
 	background-size: cover;
 	width: 45%;
 	height: 100%;
@@ -258,10 +258,31 @@ a:hover { color: #22aa88; }
 	background-size: cover;
 	background-position: center center;
 }
-.works .work > h1 { padding: 60px 60px 0px 60px; margin: 0; font-weight: bold; width: 100%; box-sizing: border-box; float: left; }
-.works .work .info { padding: 10px 60px 0 60px; width: 100%; max-width: 720px; line-height: 1.5em; box-sizing: border-box; float: left; }
-
-.works .work .links { padding: 20px 60px 60px 60px; float: left; }
+.works .work > h1 
+{ 
+	padding: 60px 60px 0px 60px; 
+	margin: 0; 
+	font-weight: bold; 
+	width: 100%; 
+	box-sizing: border-box; 
+	float: left; 
+}
+.works .work .info 
+{ 
+	padding: 10px 60px 0 60px; 
+	width: 100%; 
+	max-width: 720px; 
+	line-height: 1.5em; 
+	box-sizing: border-box; 
+	float: left;
+}
+.works .work .links 
+{ 
+	padding: 20px 60px 60px 60px; 
+	width: 100%; 
+	box-sizing: border-box; 
+	float: left; 
+}
 .works .work .links a 
 { 
 	float: left; 
