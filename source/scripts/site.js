@@ -110,9 +110,24 @@ window.onload = function()
 					var disqus_shortname = 'noelfb-portfolio';
 					var disqus_identifier = disqus.getAttribute("data-disqus");
 					
-					if (window.DISQUS)
+					if (!window.DISQUS)
 					{
-						DISQUS.reset(
+						var dsq = document.createElement('script'); 
+						dsq.type = 'text/javascript'; 
+						dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					}
+
+					var reset = function()
+					{
+						if (window.DISQUS == undefined)
+						{
+							requestAnimationFrame(reset);
+							return;
+						}
+						
+						window.DISQUS.reset(
 						{
 							reload: true,
 							config: function() 
@@ -121,15 +136,8 @@ window.onload = function()
 								this.page.url = window.location.href;
 							}
 						});
-					}
-					else
-					{
-						var dsq = document.createElement('script'); 
-						dsq.type = 'text/javascript'; 
-						dsq.async = true;
-						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					}
+					};
+					reset();
 				}
 			}
 		}
