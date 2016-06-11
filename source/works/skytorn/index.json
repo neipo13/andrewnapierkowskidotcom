@@ -1,0 +1,10 @@
+{
+	"type": "games",
+	"order": 20,
+	"title": "Skytorn",
+	"links":
+	[
+		{ "url": "http://skytorngame.com", "label": "website" },
+		{ "url": "http://skytorn.tumblr.com", "label": "devlog" }
+	]
+}

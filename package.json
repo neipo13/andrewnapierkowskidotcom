@@ -1,0 +1,13 @@
+{
+  "name": "noelfb_dot_com",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-cli": "^1.2.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-mustache": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "through2": "^2.0.1"
+  }
+}

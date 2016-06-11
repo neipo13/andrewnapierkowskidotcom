@@ -1,0 +1,16 @@
+{{#games}}
+				<div class="work game work-{{id}}">
+					<div class="postcard" data-bg="img/{{id}}/postcard.png"></div>
+					<div class="info">
+						<h1>{{title}}</h1>
+						<p>{{{description}}}</p>
+					</div>
+					{{#links.length}}
+					<div class="links">
+					{{#links}}
+						<a href="{{url}}"><img src="img/link.png" alt=""/><p>{{label}}</p></a>
+					{{/links}}
+					</div>
+					{{/links.length}}
+				</div>
+{{/games}}
