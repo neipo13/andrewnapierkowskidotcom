@@ -258,9 +258,8 @@ a:hover { color: #22aa88; }
 	background-size: cover;
 	background-position: center center;
 }
-.works .work .info { padding: 60px 60px 0 60px; max-width: 600px; float: left; }
-.works .work .info h1 { padding: 0 0 8px 0; margin: 0; font-weight: bold; }
-.works .work .info p { padding: 0; margin: 0; color: #666; line-height: 1.6em; }
+.works .work > h1 { padding: 60px 60px 0px 60px; margin: 0; font-weight: bold; width: 100%; float: left; }
+.works .work .info { padding: 10px 60px 0 60px; max-width: 600px; line-height: 1.5em; float: left; }
 
 .works .work .links { padding: 20px 60px 60px 60px; float: left; }
 .works .work .links a 
@@ -278,6 +277,14 @@ a:hover { color: #22aa88; }
 .works .work .links a img { margin-right: 12px; float: left; }
 .works .work .links a p { margin-top: -3px; float: left; }
 .works .work .links a:hover { color: #22aa88; border: 1px solid #22aa88 }
+
+.works .work .disqus
+{
+	width: 100%;
+	max-width: 600px;
+	padding: 60px;
+	float: left;
+}
 
 /* MAX-WIDTH STUFF				*/
 /* ---------------------------- */

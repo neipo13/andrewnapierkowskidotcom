@@ -75,37 +75,63 @@ window.onload = function()
 				back.style.top = v * 24;
 			})
 
-			// toggle current
+			// disable previous
 			if (current != null)
-				current.style.display = "none";
-			current = works.getElementsByClassName("work-" + id)[0];
-			current.style.display = "block";
-
-			// show postcard of the current selection
-			var postcard = current.getElementsByClassName("postcard")[0];
-			postcard.style.backgroundImage = 'url(' + postcard.getAttribute("data-bg") + ')';
-
-			// show any images we should load
-			var imgs = current.getElementsByTagName("img");
-			for (var i = 0; i < imgs.length; i ++)
-				if (imgs[i].getAttribute("data-toload") != undefined)
-					imgs[i].src = imgs[i].getAttribute("data-toload");
-
-			// disqus?
-			// todo: learn how to load / unload multiple disqus threads
-			/*
-			var disqus = current.getElementsByClassName("disqus")[0];
-			if (disqus != undefined)
 			{
-				var disqus_shortname = 'noelfb-portfolio';
-				var disqus_identifier = disqus.getAttribute("data-disqus");
+				current.style.display = "none";
+				var lastDisqus = current.getElementsByClassName("disqus")[0];
+				if (lastDisqus != undefined)
+				{
+					lastDisqus.innerHTML = "";
+					lastDisqus.setAttribute("id", "");
+				}
+			}
 
-				(function() {
-					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-				})();
-			}*/
+			// enable next
+			{
+				current = works.getElementsByClassName("work-" + id)[0];
+				current.style.display = "block";
+
+				// show postcard of the current selection
+				var postcard = current.getElementsByClassName("postcard")[0];
+				postcard.style.backgroundImage = 'url(' + postcard.getAttribute("data-bg") + ')';
+
+				// show any images we should load
+				var imgs = current.getElementsByTagName("img");
+				for (var i = 0; i < imgs.length; i ++)
+					if (imgs[i].getAttribute("data-toload") != undefined)
+						imgs[i].src = imgs[i].getAttribute("data-toload");
+
+				// disqus?
+				var disqus = current.getElementsByClassName("disqus")[0];
+				if (disqus != undefined)
+				{
+					disqus.setAttribute("id", "disqus_thread");
+					var disqus_shortname = 'noelfb-portfolio';
+					var disqus_identifier = disqus.getAttribute("data-disqus");
+					
+					if (window.DISQUS)
+					{
+						DISQUS.reset(
+						{
+							reload: true,
+							config: function() 
+							{
+								this.page.identifier = disqus_identifier;
+								this.page.url = window.location.href;
+							}
+						});
+					}
+					else
+					{
+						var dsq = document.createElement('script'); 
+						dsq.type = 'text/javascript'; 
+						dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					}
+				}
+			}
 		}
 	}
 

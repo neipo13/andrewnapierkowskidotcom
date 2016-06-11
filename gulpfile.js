@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	cleanCSS = require("gulp-clean-css"),
 	gutil = require('gulp-util'),
 	htmlmin = require('gulp-htmlmin'),
+	smushit = require('gulp-smushit'),
 	through = require('through2'),
 	del = require('del'),
 	path = require("path"),
@@ -23,6 +24,13 @@ gulp.task("images", function()
 	gulp.src(["source/images/*", "source/works/*/*.png"])
 	.pipe(gulp.dest("site/img"));
 });
+
+gulp.task("image-compress", function()
+{
+	gulp.src(["source/images/*", "source/works/*/*.png"])
+	.pipe(smushit({ verbose: true}))
+	.pipe(gulp.dest("site/img"));
+})
 
 gulp.task("works", function()
 {
@@ -81,7 +89,12 @@ gulp.task('clean', function()
 	return del(['site']);
 });
 
-gulp.task('default', ['clean', 'works'], function() 
+gulp.task('test', ['clean', 'works'], function() 
 {
 	gulp.start('scripts', 'template', 'css', 'images');
+});
+
+gulp.task('publish', ['clean', 'works'], function() 
+{
+	gulp.start('scripts', 'template', 'css', 'image-compress');
 });

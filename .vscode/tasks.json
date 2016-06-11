@@ -8,8 +8,13 @@
 	"tasks":
 	[
 		{
-			"taskName": "default",
+			"taskName": "publish",
 			"isBuildCommand": true,
+			"showOutput": "always"
+		},
+		{
+			"taskName": "test",
+			"isTestCommand": true,
 			"showOutput": "always"
 		}
 	]

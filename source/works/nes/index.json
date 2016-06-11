@@ -1,5 +1,6 @@
 {
 	"type": "articles",
+	"order": 20,
 	"title": "NES Restrictions",
 	"disqus": "nes-restrictions"
 }
