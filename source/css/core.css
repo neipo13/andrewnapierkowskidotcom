@@ -258,8 +258,8 @@ a:hover { color: #22aa88; }
 	background-size: cover;
 	background-position: center center;
 }
-.works .work > h1 { padding: 60px 60px 0px 60px; margin: 0; font-weight: bold; width: 100%; float: left; }
-.works .work .info { padding: 10px 60px 0 60px; max-width: 600px; line-height: 1.5em; float: left; }
+.works .work > h1 { padding: 60px 60px 0px 60px; margin: 0; font-weight: bold; width: 100%; box-sizing: border-box; float: left; }
+.works .work .info { padding: 10px 60px 0 60px; width: 100%; max-width: 720px; line-height: 1.5em; box-sizing: border-box; float: left; }
 
 .works .work .links { padding: 20px 60px 60px 60px; float: left; }
 .works .work .links a 
@@ -281,8 +281,9 @@ a:hover { color: #22aa88; }
 .works .work .disqus
 {
 	width: 100%;
-	max-width: 600px;
+	max-width: 720px;
 	padding: 60px;
+	box-sizing: border-box; 
 	float: left;
 }
 
