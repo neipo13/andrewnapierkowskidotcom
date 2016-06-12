@@ -77,9 +77,9 @@ gulp.task("template", function()
 	for  (var k in sorted)
 		sorted[k].sort(function(a, b) { return Math.sign(b.order - a.order); });
 
-	return gulp.src(source + 'templates/index.mustache')
+	return gulp.src(source + 'templates/*.mustache')
 	.pipe(mustache(sorted))
-	.pipe(rename('index.html'))
+	.pipe(rename({extname: ".html"}))
 	.pipe(htmlmin({collapseWhitespace: true }))
 	.pipe(gulp.dest('site'));
 });

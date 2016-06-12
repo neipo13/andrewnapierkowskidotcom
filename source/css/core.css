@@ -58,7 +58,7 @@ a:hover { color: #22aa88; }
 .banner .info img
 {
 	width: 20%;
-	border-radius: 60px;
+	border-radius: 50%;
 	float: left;
 }
 
