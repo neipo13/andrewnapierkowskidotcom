@@ -72,7 +72,7 @@ window.onload = function()
 			tween(0, 1, 1, cubeInOut, function(v)
 			{
 				back.style.opacity = v;
-				back.style.top = v * 24;
+				back.style.left = v * 24;
 			})
 
 			// disable previous

@@ -151,13 +151,13 @@ a:hover { color: #22aa88; }
 	float: left;
 }
 
-.portfolio .section .list
+.portfolio .section .links
 {
 	width: 100%;
 	float: left;
 }
 
-.portfolio .section .list .link
+.portfolio .section .list .preview
 {
 	background: #22aa88;
 	position: relative;
@@ -169,13 +169,13 @@ a:hover { color: #22aa88; }
 	cursor: pointer;
 	overflow: hidden;
 }
-.portfolio .section .list .link:nth-child(-n+4) { width: 49.5%; }
-.portfolio .section .list .link:nth-child(-2n+4) { margin-right: 0; }
-.portfolio .section .list .link:nth-child(n+5) { width: 32.667%; }
-.portfolio .section .list .link:nth-child(n+5) h2 { font-size: 1.1em; }
-.portfolio .section .list .link:nth-child(3n+7) { margin-right: 0; }
+.portfolio .section .list .preview:nth-child(-n+4) { width: 49.5%; }
+.portfolio .section .list .preview:nth-child(-2n+4) { margin-right: 0; }
+.portfolio .section .list .preview:nth-child(n+5) { width: 32.667%; height: 120px; }
+.portfolio .section .list .preview:nth-child(n+5) h2 { font-size: 1.1em; }
+.portfolio .section .list .preview:nth-child(3n+7) { margin-right: 0; }
 
-.portfolio .section .list .link .bg
+.portfolio .section .list .preview .bg
 {
 	position: absolute;
 	left: 0;
@@ -187,7 +187,7 @@ a:hover { color: #22aa88; }
 	opacity: 0.9;
 	transition: opacity 0.25s, transform 0.25s;
 }
-.portfolio .section .list .link h2
+.portfolio .section .list .preview h2
 {
 	position: absolute;
 	width: 90%;
@@ -204,8 +204,27 @@ a:hover { color: #22aa88; }
 
 	transition: opacity 0.25s, top 0.25s;
 }
-.portfolio .section .list .link:hover .bg { opacity: 0.25; transform: scale(1.2, 1.2); }
-.portfolio .section .list .link:hover h2 { opacity: 1; top: 50%; }
+.portfolio .section .list .preview:hover .bg { opacity: 0.25; transform: scale(1.2, 1.2); }
+.portfolio .section .list .preview:hover h2 { opacity: 1; top: 50%; }
+
+.portfolio .section .article
+{
+	float: left;
+	width:  49.5%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #22aa88;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.25s;
+}
+.portfolio .section .article:hover { background: #000; }
+.portfolio .section .article:nth-child(2n+0) { margin-right: 0; }
+
 
 /* INDIVIDUAL WORK 				*/
 /* ---------------------------- */
