@@ -1,6 +1,6 @@
 {{#articles}}
-				<div class="work article work-{{id}}">
-					<div class="postcard" data-bg="img/{{id}}/postcard.png"></div>
+				<div class="work full-article work-{{id}}"{{#oldurl}} data-oldurl="{{oldurl}}"{{/oldurl}} data-id="{{id}}">
+					<div class="postcard" data-bg="{{site}}img/{{id}}/postcard.png"></div>
 					<h1>{{title}}</h1>
 					<div class="info">{{{body}}}</div>
 					{{#disqus}}

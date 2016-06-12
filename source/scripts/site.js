@@ -181,4 +181,18 @@ window.onload = function()
 	var hash = window.location.hash;
 	if (hash.length > 2)
 		view(hash.replace('#', ''));
+
+	// check if they're using an old URL to an article
+	var loc = window.location.pathname;
+	var articles = document.getElementsByClassName("full-article");
+	for (var i = 0; i < articles.length; i ++)
+	{
+		var oldurl = articles[i].getAttribute("data-oldurl");
+		if (oldurl != undefined && loc.toLowerCase().indexOf(oldurl.toLowerCase()) >= 0)
+		{
+			window.history.pushState({}, window.pageTitle, baseurl);
+			view(articles[i].getAttribute("data-id"));
+			break;
+		}
+	}
 }

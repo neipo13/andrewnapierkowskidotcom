@@ -14,6 +14,11 @@ var json = {};
 var source = './source/';
 var bin = './site/';
 
+// i added the ability (using .htaccess) to view the index.html from any page, to keep URLs from old links working
+// however this means that the .html needs to know the relative URL to images/css/js, so I send this url through to mustache
+// ex. now "http://noelberry.ca/2011/04/procedural-generation-the-caves" still redirects appropriately
+var baseurl='http://localhost/personal/noelfb2016/site/';
+
 gulp.task("css", function()
 {
 	return gulp.src(source + "css/*")
@@ -76,6 +81,8 @@ gulp.task("template", function()
 	}
 	for  (var k in sorted)
 		sorted[k].sort(function(a, b) { return Math.sign(b.order - a.order); });
+
+	sorted.site = baseurl;
 
 	return gulp.src(source + 'templates/*.mustache')
 	.pipe(mustache(sorted))
