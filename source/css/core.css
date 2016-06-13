@@ -118,19 +118,23 @@ a:hover { color: #22aa88; }
 {
 	position: absolute;
 	left: 0;
-	background: #fff;
 	width: 100%;
 	min-height: 100%;
 	float: left;
 	overflow-y: visible;
+	background: #ddd;
 }
 
 .portfolio .section
 {
-	width: calc(100% - 120px);
-	margin: 60px;
+	width: 100%;
+	padding: 60px;
+	padding-top: 0;
+	box-sizing: border-box;
+	background: #fff;
 	float: left;
 }
+.portfolio .section:first-child { padding-top: 60px; }
 
 .portfolio .section h1
 {
@@ -230,7 +234,7 @@ a:hover { color: #22aa88; }
 .works
 {
 	position: absolute;
-	background: #fff;
+	background: #ddd;
 	left: 100%;
 	width: 100%;
 	min-height: 100%;
@@ -262,6 +266,7 @@ a:hover { color: #22aa88; }
 .works .work
 {
 	width: 100%;
+	background: #fff;
 	box-sizing: border-box;
 	padding-bottom: 60px;
 	display: none;
@@ -328,7 +333,7 @@ a:hover { color: #22aa88; }
 .ending
 {
 	width: 100%;
-	padding: 20px;
+	padding: 60px;
 	box-sizing: border-box;
 	background: #ddd;
 	color: #666;
@@ -336,7 +341,7 @@ a:hover { color: #22aa88; }
 	float: left;
 }
 
-/* MAX-WIDTH STUFF				*/
+/* RESIZING STUFF				*/
 /* ---------------------------- */
 
 @media(max-width: 900px) {
@@ -345,6 +350,11 @@ a:hover { color: #22aa88; }
 }
 
 @media(max-width: 600px) {
+	.banner .info img { display: none; }
+	.banner .info .about  { width: 100%; }
+}
+
+@media(max-width: 1200px) and (min-width: 900px) {
 	.banner .info img { display: none; }
 	.banner .info .about  { width: 100%; }
 }
