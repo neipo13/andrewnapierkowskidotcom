@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 	cleanCSS = require("gulp-clean-css"),
 	gutil = require('gulp-util'),
 	htmlmin = require('gulp-htmlmin'),
-	smushit = require('gulp-smushit'),
+	imagemin = require('gulp-imagemin'),
+	cache = require('gulp-cache'),
 	through = require('through2'),
 	del = require('del'),
 	path = require("path"),
@@ -29,15 +30,9 @@ gulp.task("css", function()
 gulp.task("images", function()
 {
 	return gulp.src([source + "images/*", source + "works/*/*.png"])
+	.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
 	.pipe(gulp.dest(bin + "img"));
 });
-
-gulp.task("image-compress", function()
-{
-	return gulp.src([source + "images/*", source + "works/*/*.png"])
-	.pipe(smushit({ verbose: true}))
-	.pipe(gulp.dest(bin + "img"));
-})
 
 gulp.task("works", function()
 {
@@ -82,7 +77,8 @@ gulp.task("template", function()
 	for  (var k in sorted)
 		sorted[k].sort(function(a, b) { return Math.sign(b.order - a.order); });
 
-	sorted.site = baseurl;
+	if (baseurl.length > 0)
+		sorted.site = baseurl;
 
 	return gulp.src(source + 'templates/*.mustache')
 	.pipe(mustache(sorted))
@@ -103,12 +99,7 @@ gulp.task('clean', function()
 	return del(['site']);
 });
 
-gulp.task('test', ['clean', 'works'], function() 
-{
-	gulp.start('scripts', 'template', 'css', 'images');
-});
-
 gulp.task('publish', ['clean', 'works'], function() 
 {
-	gulp.start('scripts', 'template', 'css', 'image-compress');
+	gulp.start('scripts', 'template', 'css', 'images');
 });
