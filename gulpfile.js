@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	cleanCSS = require("gulp-clean-css"),
 	gutil = require('gulp-util'),
 	htmlmin = require('gulp-htmlmin'),
-	imagemin = require('gulp-imagemin'),
+	smushit = require('gulp-smushit'),
 	cache = require('gulp-cache'),
 	through = require('through2'),
 	del = require('del'),
@@ -18,7 +18,7 @@ var bin = './site/';
 // i added the ability (using .htaccess) to view the index.html from any page, to keep URLs from old links working
 // however this means that the .html needs to know the relative URL to images/css/js, so I send this url through to mustache
 // ex. now "http://noelberry.ca/2011/04/procedural-generation-the-caves" still redirects appropriately
-var baseurl='http://localhost/personal/noelfb2016/site/';
+var baseurl='/';
 
 gulp.task("css", function()
 {
@@ -30,7 +30,7 @@ gulp.task("css", function()
 gulp.task("images", function()
 {
 	return gulp.src([source + "images/*", source + "works/*/*.png"])
-	.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+	.pipe(cache(smushit()))
 	.pipe(gulp.dest(bin + "img"));
 });
 
@@ -97,6 +97,11 @@ gulp.task("scripts", function()
 gulp.task('clean', function() 
 {
 	return del(['site']);
+});
+
+// clear cache used for images (never called by default)
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
 });
 
 gulp.task('publish', ['clean', 'works'], function() 
