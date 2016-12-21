@@ -1,7 +1,10 @@
 {
 	"type": "games",
-	"order": 19,
+	"order": 20,
 	"title": "Celeste",
-	"description": "A hardcore platformer game I created with Matt Thorson in 4 days with PICO-8.",
-	"links": [{"url": "http://www.lexaloffle.com/bbs/?tid=2145&pid=11724&autoplay=1#pp", "label": "play online"}]
+	"description": "An upcomming game I'm creating with Matt Thorson and friends!",
+	"links": [
+		{"url": "http://www.celestegame.com", "label": "Visit Website"},
+		{"url": "https://www.rockpapershotgun.com/2016/12/21/celeste/", "label": "RPS Article"}
+	]
 }
