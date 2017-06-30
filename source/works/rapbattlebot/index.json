@@ -1,0 +1,9 @@
+{
+	"type": "projects",
+	"order": 0,
+	"title": "Rap Battle Bot",
+	"description": "A twitter bot that rap battles you as you @mention it. Uses Wordnik API to grab a rhyming word with the last word of your tweet and then uses its part of speech to place it in an appropriate pre-written line.",
+	"links": [
+		{"url": "http://towerfall-game.com", "label": "Twitter"}
+	]
+}

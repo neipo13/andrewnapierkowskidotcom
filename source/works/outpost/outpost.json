@@ -1,9 +1,0 @@
-{
-	"type": "games",
-	"order": 15,
-	"title": "Outpost",
-	"links": [
-		{"url": "http://jam.iamagamer.ca/submissions/50-outpost", "label": "Jam Version (flash)"},
-		{"url": "http://noelberry.ca/content/games/op/Outpost.zip", "label": "Post Jam Version (.exe)" }
-	]
-}

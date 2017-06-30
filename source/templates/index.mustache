@@ -2,27 +2,26 @@
 {{> partials/javascript}}
 
 		<div class="banner">
-			<div class="vignette">&nbsp;</div>
+			<!--<div class="vignette">&nbsp;</div>-->
 			<div class="info">
-				<img src="img/noel.jpg" alt="Noel!!"/>
+				<img src="img/andrew.jpg" alt="Andrew"/>
 				<div class="about">
-					<h1>Noel Berry</h1>
-					<p>Hey, I'm an independent game developer from Canada! Sometimes, when I'm in the right mood, I make video games and art. Or something.</p>
+					<h1>Andrew Napierkowski</h1>
+					<p>I'm a software engineer working in Philadelphia, PA . I also work on independent games and sometimes my own web projects.</p>
 				</div>
 			</div>
-			<div class="social">
-				<a class="twitter" href="https://twitter.com/noelfb"></a>
-				<a class="tumblr" href="https://noelfb.tumblr.com"></a>
-				<a class="email" href="mailto:thenberry@gmail.com"></a>
-			</div>
+			<!--<div class="social">
+				<a class="twitter" href="https://twitter.com/neipo13"></a>
+				<a class="email" href="mailto:andrew.napierkowski@gmail.com"></a>
+			</div>-->
 		</div>
 
 		<div class="content">
 			<div class="portfolio">
 
 				<div class="section">
-					<h1 id="games">Games I Created</h1>
-					<p>I've been making video games for what feels like a really long time! Sometimes I make games in a few hours, and sometimes I make them over a few years.</p>
+					<h1 id="games">Games</h1>
+					<p></p>
 					<div class="list">
 					{{#games}}
 						<div class="link preview" data-id="{{id}}">
@@ -34,24 +33,15 @@
 				</div>
 
 				<div class="section">
-					<h1 id="websites">Websites I Designed</h1>
-					<p>I also design websites! I like messin' with all that HTML / CSS / Javascript stuff to create rad things for people to look at.</p>
+					<h1 id="projects">Other Projects</h1>
+					<p></p>
 					<div class="list">
-					{{#websites}}
-						<a href="{{url}}" class="link preview" data-id="{{id}}">
+					{{#projects}}
+						<a class="link preview" data-id="{{id}}">
 							<span class="bg" style="background-image: url('img/{{id}}/preview.png');"></span>
 							<h2>{{title}}</h2>
 						</a>
-					{{/websites}}
-					</div>
-				</div>
-
-				<div class="section">
-					<h1 id="articles">Articles I scribbled</h1>
-					<div class="list">
-					{{#articles}}
-						<div class="link article" data-id="{{id}}">{{title}}</div>
-					{{/articles}}
+					{{/projects}}
 					</div>
 				</div>
 
@@ -60,7 +50,7 @@
 			<div class="works">
 				<div class="back">&lt;&lt; Portfolio</div>
 				{{> partials/games}}
-				{{> partials/articles}}
+				{{> partials/projects}}
 				{{> partials/ending}}
 			</div>
 		</div>

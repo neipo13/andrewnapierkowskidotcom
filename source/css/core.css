@@ -17,11 +17,15 @@ a:hover { color: #22aa88; }
 
 .banner
 {
-	position: fixed;
-	background: #000 url("../img/banner.png") center center;
+	/*position: fixed;*/
+	position: relative;
+	background: #000 url("../img/banner.jpg") center center;
 	background-size: cover;
-	width: 45%;
-	height: 100%;
+	/*width: 45%;*/
+	width: 100%;
+	/*height: 100%;*/
+	height: 600px;
+	max-height: 75%;
 	float: left;
 	z-index: 100;
 }
@@ -29,7 +33,8 @@ a:hover { color: #22aa88; }
 .content
 {
 	position: relative;
-	width: 55%;
+	/*width: 55%;*/
+	width: 100%;
 	min-height: 100%;
 	float: right;
 	overflow-x: hidden;
@@ -57,14 +62,14 @@ a:hover { color: #22aa88; }
 
 .banner .info img
 {
-	width: 20%;
+	width: 10%;
 	border-radius: 50%;
 	float: left;
 }
 
 .banner .info .about
 {
-	width: 75%;
+	width: 85%;
 	float: right;
 }
 
@@ -321,19 +326,10 @@ a:hover { color: #22aa88; }
 .works .work .links a p { margin-top: -3px; float: left; }
 .works .work .links a:hover { color: #22aa88; border: 1px solid #22aa88 }
 
-.works .work .disqus
-{
-	width: 100%;
-	max-width: 720px;
-	padding: 60px;
-	box-sizing: border-box; 
-	float: left;
-}
-
 .ending
 {
 	width: 100%;
-	padding: 60px;
+	padding: 30px;
 	box-sizing: border-box;
 	background: #ddd;
 	color: #666;
@@ -345,16 +341,11 @@ a:hover { color: #22aa88; }
 /* ---------------------------- */
 
 @media(max-width: 900px) {
-	.banner { position: relative; width: 100%; height: 600px; }
+	.banner { position: relative; width: 100%;}
 	.content { position: relative; width: 100%; }
 }
 
 @media(max-width: 600px) {
-	.banner .info img { display: none; }
-	.banner .info .about  { width: 100%; }
-}
-
-@media(max-width: 1200px) and (min-width: 900px) {
 	.banner .info img { display: none; }
 	.banner .info .about  { width: 100%; }
 }

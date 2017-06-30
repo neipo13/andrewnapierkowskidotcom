@@ -79,12 +79,6 @@ window.onload = function()
 			if (current != null)
 			{
 				current.style.display = "none";
-				var lastDisqus = current.getElementsByClassName("disqus")[0];
-				if (lastDisqus != undefined)
-				{
-					lastDisqus.innerHTML = "";
-					lastDisqus.setAttribute("id", "");
-				}
 			}
 
 			// enable next
@@ -101,44 +95,6 @@ window.onload = function()
 				for (var i = 0; i < imgs.length; i ++)
 					if (imgs[i].getAttribute("data-toload") != undefined)
 						imgs[i].src = imgs[i].getAttribute("data-toload");
-
-				// disqus?
-				var disqus = current.getElementsByClassName("disqus")[0];
-				if (disqus != undefined)
-				{
-					disqus.setAttribute("id", "disqus_thread");
-					var disqus_shortname = 'noelfb-portfolio';
-					var disqus_identifier = disqus.getAttribute("data-disqus");
-					
-					if (!window.DISQUS)
-					{
-						var dsq = document.createElement('script'); 
-						dsq.type = 'text/javascript'; 
-						dsq.async = true;
-						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					}
-
-					var reset = function()
-					{
-						if (window.DISQUS == undefined)
-						{
-							requestAnimationFrame(reset);
-							return;
-						}
-						
-						window.DISQUS.reset(
-						{
-							reload: true,
-							config: function() 
-							{
-								this.page.identifier = disqus_identifier;
-								this.page.url = window.location.href;
-							}
-						});
-					};
-					reset();
-				}
 			}
 		}
 	}
@@ -181,18 +137,4 @@ window.onload = function()
 	var hash = window.location.hash;
 	if (hash.length > 2)
 		view(hash.replace('#', ''));
-
-	// check if they're using an old URL to an article
-	var loc = window.location.pathname;
-	var articles = document.getElementsByClassName("full-article");
-	for (var i = 0; i < articles.length; i ++)
-	{
-		var oldurl = articles[i].getAttribute("data-oldurl");
-		if (oldurl != undefined && loc.toLowerCase().indexOf(oldurl.toLowerCase()) >= 0)
-		{
-			window.history.pushState({}, window.pageTitle, baseurl);
-			view(articles[i].getAttribute("data-id"));
-			break;
-		}
-	}
 }
