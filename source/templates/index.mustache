@@ -7,13 +7,19 @@
 				<img src="img/andrew.jpg" alt="Andrew"/>
 				<div class="about">
 					<h1>Andrew Napierkowski</h1>
-					<p>I'm a software engineer working in Philadelphia, PA . I also work on independent games and sometimes my own web projects.</p>
+					<p>
+						I'm a software engineer working in Philadelphia, PA.
+						<br>
+						I also work on my own games and  web projects.
+					</p>
 				</div>
 			</div>
-			<!--<div class="social">
-				<a class="twitter" href="https://twitter.com/neipo13"></a>
-				<a class="email" href="mailto:andrew.napierkowski@gmail.com"></a>
-			</div>-->
+			<div class="social">
+				<a href="https://twitter.com/neipo13">Twitter</a>
+				<a href="mailto:andrew.napierkowski@gmail.com">Email</a>
+				<a href="https://blog.andrewnapierkowski.com">Blog</a>
+				<a href="https://github.com/neipo13">Github</a>
+			</div>
 		</div>
 
 		<div class="content">
@@ -25,7 +31,7 @@
 					<div class="list">
 					{{#games}}
 						<div class="link preview" data-id="{{id}}">
-							<div class="bg" style="background-image: url('img/{{id}}/preview.png');"></div>
+							<div class="bg" style="background-image: url('img/{{id}}/preview.{{previewExt}}');"></div>
 							<h2>{{title}}</h2>
 						</div>
 					{{/games}}
@@ -38,7 +44,7 @@
 					<div class="list">
 					{{#projects}}
 						<a class="link preview" data-id="{{id}}">
-							<span class="bg" style="background-image: url('img/{{id}}/preview.png');"></span>
+							<span class="bg" style="background-image: url('img/{{id}}/preview.{{previewExt}}');"></span>
 							<h2>{{title}}</h2>
 						</a>
 					{{/projects}}

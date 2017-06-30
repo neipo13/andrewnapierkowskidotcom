@@ -5,5 +5,7 @@
 	"description": "My first released game. Inspiration came from flappy bird. A project made over a month period in college in Unity3D",
 	"links": [
 		{"url": "https://play.google.com/store/apps/details?id=com.AndrewNapierkowski.HippoHop&hl=en", "label": "Play Store"}
-	]
+	],
+	"postcardExt": "gif",
+	"previewExt": "png"
 }

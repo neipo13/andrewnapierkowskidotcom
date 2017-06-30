@@ -5,5 +5,7 @@
 	"description": "A game made for the Edinboro Game Expo in 2015. Game Centers around two players sharing a single controller to play.",
 	"links": [
 		{"url": "https://andrewnapierkowski.itch.io/elbow-room", "label": "Website/Download"}
-	]
+	],
+	"postcardExt": "gif",
+	"previewExt": "png"
 }
