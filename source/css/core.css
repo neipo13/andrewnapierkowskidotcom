@@ -155,6 +155,16 @@ a:hover { color: #22aa88; }
 	float: left;
 	color: #22aa88;
 }
+
+.portfolio .section subheader
+{
+	width: 100%;
+	margin: 0;
+	padding: 0 0 12px 0;
+	float: left;
+	opacity: 70%;
+}
+
 .portfolio .section p
 {
 	font-size: 1.1em;
@@ -175,7 +185,7 @@ a:hover { color: #22aa88; }
 	background: #22aa88;
 	position: relative;
 
-	height: 180px;
+	height: 360px;
 	margin: 0 1% 1% 0;
 	float: left;
 
@@ -252,6 +262,7 @@ a:hover { color: #22aa88; }
 	float: left;
 }
 
+
 .works .back
 {
 	position: absolute;
@@ -299,6 +310,17 @@ a:hover { color: #22aa88; }
 	width: 100%; 
 	box-sizing: border-box; 
 	float: left; 
+}
+
+.works .work > .subheader
+{
+	padding: 0px 60px 0px 60px; 
+	margin: 0; 
+	font-weight: bold; 
+	width: 100%; 
+	box-sizing: border-box; 
+	float: left; 
+	opacity: 0.6;
 }
 .works .work .info 
 { 
