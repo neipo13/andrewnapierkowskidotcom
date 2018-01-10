@@ -371,6 +371,7 @@ a:hover { color: #22aa88; }
 @media(max-width: 900px) {
 	.banner { position: relative; width: 100%; height:600px;}
 	.content { position: relative; width: 100%; }
+	.portfolio .section .list .preview { height: 180px;}
 }
 
 @media(max-width: 600px) {
