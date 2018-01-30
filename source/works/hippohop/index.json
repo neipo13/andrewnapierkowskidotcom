@@ -1,6 +1,6 @@
 {
 	"type": "games",
-	"order": 0,
+	"order": 3,
 	"title": "Hippo Hop",
 	"description": "My first released game. Inspiration came from flappy bird. A project made over a month period in college in Unity3D",
 	"links": [

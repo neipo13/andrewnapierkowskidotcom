@@ -1,0 +1,12 @@
+{
+	"type": "games",
+	"order": 1,
+	"title": "Ninja Vanish",
+	"description": "A 2-4 player multiplayer battle between ninjas who cannot be seen unless they allow themselves to.<br>Made in 48 hours for the 2018 Global Game Jam with the theme <i>Transmission</i>.",
+	"links": [
+		{"url": "https://andrewnapierkowski.itch.io/ninja-vanish", "label": "Website/Download"}
+	],
+	"postcardExt": "png",
+	"previewExt": "png",
+	"date": "January 2018"
+}
