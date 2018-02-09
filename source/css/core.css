@@ -194,7 +194,7 @@ a:hover { color: #22aa88; }
 }
 .portfolio .section .list .preview:nth-child(-n+2) { width: 49.5%; }
 .portfolio .section .list .preview:nth-child(-2n+2) { margin-right: 0; }
-.portfolio .section .list .preview:nth-child(n+3) { width: 32.667%; height: 120px; }
+.portfolio .section .list .preview:nth-child(n+3) { width: 32.667%; height: 240px; }
 .portfolio .section .list .preview:nth-child(n+3) h2 { font-size: 1.1em; }
 .portfolio .section .list .preview:nth-child(3n+5) { margin-right: 0; }
 
