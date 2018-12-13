@@ -1,0 +1,12 @@
+{
+	"type": "games",
+	"order": 1,
+	"title": "Super Crate Hoarder",
+	"description": "A Super Crate Box clone with a twist, any crates collected stay on the screen and become obstacles/platforms.<br>Made in 48 hours for the Ludum Dare 42 with the theme <i>Running out of space</i>.",
+	"links": [
+		{"url": "https://andrewnapierkowski.itch.io/super-crate-hoarder", "label": "Website/Download"}
+	],
+	"postcardExt": "gif",
+	"previewExt": "gif",
+	"date": "August 2018"
+}

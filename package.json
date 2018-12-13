@@ -11,5 +11,8 @@
     "gulp-smushit": "^1.2.0",
     "gulp-uglify": "^1.5.3",
     "through2": "^2.0.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0"
   }
 }
