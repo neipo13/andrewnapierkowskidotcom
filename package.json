@@ -13,6 +13,6 @@
     "through2": "^2.0.1"
   },
   "dependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^3.0.0"
   }
 }
