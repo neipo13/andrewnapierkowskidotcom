@@ -1,0 +1,157 @@
+
+/* -------------- */
+/* Header Classes */
+/* -------------- */
+.page-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    color: rgba(0,0,0,0.8);
+    -webkit-animation: fade-in-down 0.6s;
+    animation: fade-in-down 0.6s both;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.page-description {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Merriweather", serif;
+    letter-spacing: 0.01rem;
+    color: rgba(0,0,0,0.5);
+    -webkit-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s both;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.page-description-2
+{
+    -webkit-animation-delay: 0.22s;
+    animation-delay: 0.22s;
+    -webkit-animation: fade-in-down 1.2s;
+    animation: fade-in-down 1.2s both;
+
+}
+
+
+.menu-items{    
+    padding-inline-start: 0px;
+    -webkit-animation: fade-in-down 1.2s;
+    animation: fade-in-down 1.2s both;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+
+.menu-items li {
+    display: inline;
+}
+.menu-items a {
+    color: rgba(0,0,0,0.5);
+}
+
+.menu-items a:hover{
+    color: #dd4a4a;
+}
+
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+.main-header {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 60vh;
+    margin-top: 5rem;
+    text-align: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.profile-pic{
+    border-radius: 15%;
+    -webkit-animation: fade-in-down 0.3s;
+    animation: fade-in-down 0.3s both;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+/* ---------- */
+/* OVERRIDES  */
+/* ---------- */
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: #f5f8fa;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    color: #3A4145;
+}
+
+h1{
+    
+    line-height: 1.15em;
+    margin: 0 0 0.4em 0;
+    font-family: "Open Sans", sans-serif;
+    text-rendering: geometricPrecision;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+/* ---------- */
+/* ANIMATIONS */
+/* ---------- */
+
+/* Used to fade in title/desc on the home page */
+@-webkit-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
